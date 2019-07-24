@@ -1,0 +1,32 @@
+{
+  "name": "@asayerio/redux",
+  "description": "Redux middleware for Asayer",
+  "version": "1.0.0",
+  "keywords": [
+    "asayer"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "prettier": "prettier --write lib/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asayerio/redux.git"
+  },
+  "author": "Alex Tsokurov <alex@asayer.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asayerio/redux/issues"
+  },
+  "homepage": "https://github.com/asayerio/redux#readme",
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  },
+  "dependencies": {
+    "deep-diff": "^1.0.2"
+  }
+}
