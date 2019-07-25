@@ -16,18 +16,19 @@ import createMiddleware from '@asayerio/redux';
 
 const store = createStore(
   reducer,
-  applyMiddleware(createMiddleware())
-)
+  applyMiddleware(createMiddleware()),
+);
 ```
 
 You can customize the middleware behaviour with options to sanitize your data.
 
 ```js
 createMiddleware({
+  actionFilter: action => action.type !== 'DRAW', // only actions which pass this test will be recorded
+  actionTransformer: action => action.type === 'LOGIN' ? { type: 'LOGIN' } : action,
   stateTransformer: state => {
     const { jwt, ..._state } = state;
     return _state;
   },
-  actionTransformer: action => action.type === 'LOGIN' ? { type: 'LOGIN' } : action;
 })
 ```
